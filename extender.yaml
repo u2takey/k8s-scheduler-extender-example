@@ -64,7 +64,7 @@ data:
     "extenders" : [{
       "urlPrefix": "http://localhost/scheduler",
       "filterVerb": "predicates/always_true",
-      "prioritizeVerb": "priorities/zero_score",
+      "prioritizeVerb": "priorities/group_score",
       "preemptVerb": "preemption",
       "bindVerb": "",
       "weight": 1,
@@ -98,7 +98,7 @@ spec:
           name: my-scheduler-config
       containers:
       - name: my-scheduler-ctr
-        image: gcr.io/google_containers/hyperkube:v1.16.3
+        image: sdevd/hyperkube
         imagePullPolicy: IfNotPresent
         args:
         - kube-scheduler
@@ -108,16 +108,8 @@ spec:
         - name: my-scheduler-config
           mountPath: /my-scheduler
       - name: my-scheduler-extender-ctr
-        image: a/b:c
+        image: ccr.ccs.tencentyun.com/mla-library/tool:example_scheduler
         imagePullPolicy: IfNotPresent
-        livenessProbe:
-          httpGet:
-            path: /version
-            port: 80
-        readinessProbe:
-          httpGet:
-            path: /version
-            port: 80
         ports:
           - containerPort: 80
 

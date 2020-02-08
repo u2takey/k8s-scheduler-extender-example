@@ -1,14 +1,16 @@
 # k8s-scheduler-extender-example
 This is an example of [Kubernetes Scheduler Extender](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/scheduling/scheduler_extender.md)
 
+Forked from [k8s-scheduler-extender-example](https://github.com/everpeace/k8s-scheduler-extender-example) as demo for 
+
 ## How to
 
 ### 0. checkout the repo
 
 ```shell
-$ git clone git@github.com:everpeace/k8s-scheduler-extender-example.git
+$ git clone git@github.com:u2takey/k8s-scheduler-extender-example.git
 $ cd k8s-scheduler-extender-example
-$ git submodule update --init
+$ go mod tidy
 ```
 
 ### 1. buid a docker image
@@ -60,21 +62,3 @@ Events:
   Normal  Started                8s    kubelet, minikube  Started container
 ```
 
-
-## License
-
-```
-Copyright 2018 Shingo Omura <https://github.com/everpeace>
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-   http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-```
