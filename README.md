@@ -1,7 +1,7 @@
 # k8s-scheduler-extender-example
 This is an example of [Kubernetes Scheduler Extender](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/scheduling/scheduler_extender.md)
 
-Forked from [k8s-scheduler-extender-example](https://github.com/everpeace/k8s-scheduler-extender-example) as demo for 
+Forked from [k8s-scheduler-extender-example](https://github.com/everpeace/k8s-scheduler-extender-example) as demo for [https://cloud.tencent.com/developer/article/1580234](https://cloud.tencent.com/developer/article/1580234)
 
 ## How to
 
